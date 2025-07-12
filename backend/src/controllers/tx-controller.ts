@@ -28,7 +28,6 @@ export async function transactions(req: Request, res: Response) {
     RETURNING *
     `;
 
-    console.log(transaction);
     res.status(201).json(transaction[0]);
   } catch (error) {
     console.error("Failed to create a transaction ", error);
@@ -41,7 +40,6 @@ export async function transactions(req: Request, res: Response) {
 export async function fetchTransactions(req: Request, res: Response) {
   try {
     const { userId } = req.params;
-    console.log(userId);
 
     if (!userId) {
       res.status(400).json({
@@ -66,7 +64,6 @@ export async function fetchTransactions(req: Request, res: Response) {
 export async function deleteTransaction(req: Request, res: Response) {
   try {
     const { id } = req.params;
-    console.log(id);
 
     if (isNaN(parseInt(id))) {
       res.status(404).json({ message: "Invalid transaction ID" });
@@ -97,7 +94,6 @@ export async function deleteTransaction(req: Request, res: Response) {
 export async function fetchSummary(req: Request, res: Response) {
   try {
     const { userId } = req.params;
-    console.log(userId);
 
     if (!userId) {
       res.status(400).json({
