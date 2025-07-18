@@ -12,11 +12,6 @@ export async function transactions(req: Request, res: Response) {
       return;
     }
 
-    if (isNaN(parseInt(user_id))) {
-      res.status(404).json({ message: "Invalid user ID" });
-      return;
-    }
-
     if (isNaN(parseInt(amount))) {
       res.status(404).json({ message: "Invalid amount" });
       return;
@@ -99,11 +94,6 @@ export async function fetchSummary(req: Request, res: Response) {
       res.status(400).json({
         message: "User ID is required",
       });
-      return;
-    }
-
-    if (isNaN(parseInt(userId))) {
-      res.status(404).json({ message: "Invalid user ID" });
       return;
     }
 
