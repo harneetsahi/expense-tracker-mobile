@@ -1,4 +1,4 @@
-import express, { Response } from "express";
+import express, { Request, Response } from "express";
 import dotenv from "dotenv";
 import { connectDB } from "./config/db";
 import rateLimiter from "./middleware/rateLimiter";
@@ -16,7 +16,7 @@ app.use(rateLimiter);
 
 const PORT = process.env.PORT || 3000;
 
-app.get("/api/health", (_, res: Response) => {
+app.get("/api/health", (req: Request, res: Response) => {
   res.status(200).json({ status: "ok" });
 });
 
