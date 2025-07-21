@@ -7,3 +7,7 @@ export function formatDate(dateString: string) {
     day: "numeric",
   });
 }
+
+export function formatWithCommas(numeric: any) {
+  return new Intl.NumberFormat("en-US").format(numeric);
+}
