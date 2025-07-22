@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Image, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { useSignUp } from "@clerk/clerk-expo";
 import { Link, useRouter } from "expo-router";
 import { styles } from "@/assets/styles/auth.styles";
@@ -94,6 +94,12 @@ export default function SignUpScreen() {
       enableAutomaticScroll={true}
     >
       <View style={styles.container}>
+        <View>
+          <Image
+            source={require("../../assets/images/backdrop.png")}
+            style={styles.illustration}
+          />
+        </View>
         <Text style={styles.title}>Sign up</Text>
 
         {error !== null ? (

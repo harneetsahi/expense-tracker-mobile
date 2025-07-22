@@ -1,6 +1,6 @@
 import { useSignIn } from "@clerk/clerk-expo";
 import { Link, useRouter } from "expo-router";
-import { Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Image, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { useState } from "react";
 import { styles } from "@/assets/styles/auth.styles";
 import { Ionicons } from "@expo/vector-icons";
@@ -46,6 +46,12 @@ export default function Page() {
       enableAutomaticScroll={true}
     >
       <View style={styles.container}>
+        <View>
+          <Image
+            source={require("../../assets/images/backdrop.png")}
+            style={styles.illustration}
+          />
+        </View>
         <Text style={styles.title}>Welcome Back</Text>
 
         {error !== null ? (
