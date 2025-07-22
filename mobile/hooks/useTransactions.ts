@@ -1,9 +1,8 @@
 import { Alert } from "react-native";
 import { useCallback, useState } from "react";
+export const API_URL = "http://localhost:4444/api/transactions";
 
 export default function useTransactions(userId: string) {
-  const API_URL = "http://localhost:4444/api/transactions";
-
   const [transactions, setTransactions] = useState([]);
   const [summary, setSummary] = useState({
     balance: 0,
@@ -49,12 +48,11 @@ export default function useTransactions(userId: string) {
 
   const deleteTransaction = async (id: number) => {
     try {
-      const response = await fetch(`${API_URL}/${id}`);
+      const response = await fetch(`${API_URL}/${id}`, { method: "DELETE" });
       if (!response.ok) throw new Error("Failed to delete transaction");
 
       // re-fetch transactions after deleting one
       loadData();
-      Alert.alert("Success", "Transaction deleted successfully");
     } catch (error) {
       console.error("failed to delete the transaction ", error);
       Alert.alert("Error", "Failed to delete");
