@@ -24,7 +24,7 @@ export const styles = StyleSheet.create({
     marginBottom: 20,
   },
   txTypeButton: {
-    paddingHorizontal: 30,
+    paddingHorizontal: 40,
     paddingVertical: 15,
     borderRadius: 40,
     fontSize: 18,
@@ -35,12 +35,10 @@ export const styles = StyleSheet.create({
     borderWidth: 0.5,
   },
   txTypeActiveExpense: {
-    color: "white",
-    backgroundColor: "#da3131ff",
+    color: "#df351e",
   },
   txTypeActiveIncome: {
-    color: "white",
-    backgroundColor: "#529b33ff",
+    color: "green",
   },
   textInputAmountContainer: {
     padding: 20,
@@ -77,7 +75,7 @@ export const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 500,
     color: "black",
-    backgroundColor: "#ffffff",
+    backgroundColor: "#fbc933ff",
     margin: 20,
     textAlign: "center",
 
@@ -91,6 +89,6 @@ export const styles = StyleSheet.create({
     shadowOpacity: 0.1,
   },
   addBtnDisabled: {
-    opacity: 0.3,
+    opacity: 0.6,
   },
 });
