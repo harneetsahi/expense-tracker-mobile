@@ -5,7 +5,12 @@ export const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#ffffffff",
+    backgroundColor: "#faf9faff",
+  },
+  illustration: {
+    width: 300,
+    height: 300,
+    resizeMode: "contain",
   },
   title: {
     fontSize: 25,
@@ -38,7 +43,6 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     flex: 1,
   },
-
   textInput: {
     padding: 3,
     marginBottom: 20,
@@ -48,7 +52,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 5,
     width: 330,
     textAlign: "center",
-    backgroundColor: "#fcf5f5d9",
+    backgroundColor: "#ffffff",
   },
   errorInput: {
     borderColor: "#df2929ff",
@@ -59,8 +63,8 @@ export const styles = StyleSheet.create({
     fontSize: 18,
     width: 330,
     textAlign: "center",
-    paddingVertical: 11,
-    paddingHorizontal: 15,
+    paddingHorizontal: 30,
+    paddingVertical: 15,
     backgroundColor: "#fbc933ff",
     marginBottom: 70,
   },
@@ -69,10 +73,12 @@ export const styles = StyleSheet.create({
     marginBottom: 20,
     fontSize: 18,
     borderRadius: 15,
-    paddingVertical: 12,
     paddingHorizontal: 20,
+    paddingVertical: 15,
     width: 330,
-    backgroundColor: "#fcf5f5d9",
+    backgroundColor: "#ffffff",
+    borderWidth: 0.5,
+    borderColor: "#ecececff",
   },
   footer: {
     letterSpacing: 0.3,
